@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="95de15ec-71bf-457f-8e18-5e8bd76e79ab">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT id_pinjam, nama, judul,tgl_pinjam,tgl_kembali,denda 
+FROM tb_peminjaman,tb_anggota, tb_buku
+WHERE tb_anggota.nim = tb_peminjaman.nim AND tb_peminjaman.kode_buku = tb_buku.kode_buku]]>
+	</queryString>
+	<field name="id_pinjam" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="judul" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_pinjam" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_kembali" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="denda" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="97" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="19" width="555" height="36" backcolor="#FFCCCC" uuid="f7c84cda-b5c8-463f-8fae-d5a9291e9b92"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="54" height="31" uuid="bdedc6cf-1829-47f2-a0a2-b63ed6f1e413"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="54" y="0" width="113" height="31" uuid="0d168848-5112-43ae-bb6f-cc50a9cd20c7"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="167" y="0" width="150" height="31" uuid="847e8338-d17d-4dd0-88ad-97ca07ae4ff6"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="317" y="0" width="66" height="31" uuid="f4ae4ac1-728b-488e-b2b9-f2dd01e6230d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="383" y="0" width="78" height="31" uuid="26dfd483-135e-4e48-8cd7-9b50cc578463"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="461" y="0" width="94" height="31" uuid="47ea71c2-2184-41e1-80c7-f08626a5b8d3"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="54" height="31" backcolor="#CCCCFF" uuid="cf48e752-64bb-47d6-ba61-48abe82d0305"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="54" y="0" width="113" height="31" backcolor="#CCCCFF" uuid="97358555-f4b8-49d5-b877-49fa73d67443"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="167" y="0" width="150" height="31" backcolor="#CCCCFF" uuid="17440786-98d2-4439-bbb5-820bf34fae7a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="317" y="0" width="66" height="31" backcolor="#CCCCFF" uuid="a00b5e52-f558-4b26-aeb2-48636f35d1d3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TGL_PINJAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="383" y="0" width="78" height="31" backcolor="#CCCCFF" uuid="4468495c-7d8c-45f9-9a4e-d97b906bd6de"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[TGL_KEMBALI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="461" y="0" width="94" height="31" backcolor="#CCCCFF" uuid="849afb47-f3b4-4ea1-8f41-1da8e6e1992e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[DENDA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="54" height="31" uuid="e0bf96c9-7195-4235-85e0-c524c1846ca1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="54" y="0" width="113" height="31" uuid="656b7d9c-8913-4723-a6e8-13413f92f46b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="167" y="0" width="150" height="31" uuid="0e43889f-f571-492c-a627-d544e01f3f2c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="317" y="0" width="66" height="31" uuid="3679f210-e9de-4849-831b-53fb96e0f27f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="461" y="0" width="94" height="31" uuid="0122f960-ca79-4fed-9f09-7f793d0f2bfb"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="383" y="0" width="78" height="31" uuid="f95581da-fd96-4670-b7eb-1408cfe64160"/>
+			</rectangle>
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="54" height="31" backcolor="#CCCCFF" uuid="2920def0-25f5-4fa8-ac77-4b22d50c21ad"/>
+				<textFieldExpression><![CDATA[$F{id_pinjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="54" y="0" width="113" height="31" backcolor="#CCCCFF" uuid="6cbc94b5-bf3a-4ad6-9752-85c8abc2f1e9"/>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="167" y="0" width="150" height="31" backcolor="#CCCCFF" uuid="784a7099-c11e-4d7c-a5a0-5c563cbd4d2c"/>
+				<textFieldExpression><![CDATA[$F{judul}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="317" y="0" width="66" height="31" backcolor="#CCCCFF" uuid="2adaac17-eed3-4151-9b67-85bb6d5b7d34"/>
+				<textFieldExpression><![CDATA[$F{tgl_pinjam}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="383" y="0" width="78" height="31" backcolor="#CCCCFF" uuid="08793931-b2ea-43bd-b53e-e6d7bf632cee"/>
+				<textFieldExpression><![CDATA[$F{tgl_kembali}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="461" y="0" width="94" height="31" backcolor="#CCCCFF" uuid="18b02e3d-4ac4-4456-9afe-314804893a93"/>
+				<textFieldExpression><![CDATA[$F{denda}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
